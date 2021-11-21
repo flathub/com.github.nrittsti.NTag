@@ -1,6 +1,6 @@
 app-id: com.github.nrittsti.NTag
 runtime: org.gnome.Platform
-runtime-version: '3.38'
+runtime-version: '41'
 sdk: org.gnome.Sdk
 sdk-extensions: 
   - org.freedesktop.Sdk.Extension.openjdk
@@ -36,5 +36,5 @@ modules:
       - install -Dm644 *.{jar,png,properties} /app/opt/ntag
     sources:
       - type: archive
-        url: https://github.com/nrittsti/ntag/releases/download/v1.2.9/ntag-1.2.9-linux_bin.tar.gz
-        sha256: 94a8cf5ccc9656283fbea3807be5ab32243f83bc83454e0e00e2d788949208ac
+        url: https://github.com/nrittsti/ntag/releases/download/v1.2.11/ntag-1.2.11-linux_bin.tar.gz
+        sha256: 72c102e1b13aa8af025c56ee6607707892e430f285ae2e275cbacd206ddc1d53
