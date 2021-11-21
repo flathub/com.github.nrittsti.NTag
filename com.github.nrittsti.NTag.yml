@@ -36,5 +36,5 @@ modules:
       - install -Dm644 *.{jar,png,properties} /app/opt/ntag
     sources:
       - type: archive
-        url: https://github.com/nrittsti/ntag/releases/download/v1.2.11/ntag-1.2.11-linux_bin.tar.gz
-        sha256: 72c102e1b13aa8af025c56ee6607707892e430f285ae2e275cbacd206ddc1d53
+        url: https://github.com/nrittsti/ntag/releases/download/v1.2.12/ntag-1.2.12-linux_bin.tar.gz
+        sha256: c2f2b14b8caacaae5b21ba51a626e9cbfa565c8188489d4d016e5b3e802a5dd7
