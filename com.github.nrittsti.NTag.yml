@@ -2,8 +2,6 @@ app-id: com.github.nrittsti.NTag
 runtime: org.gnome.Platform
 runtime-version: '43'
 sdk: org.gnome.Sdk
-sdk-extensions: 
-  - org.freedesktop.Sdk.Extension.openjdk
 command: ntag
 finish-args:
   - --socket=x11
