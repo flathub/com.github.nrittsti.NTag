@@ -2,6 +2,8 @@ app-id: com.github.nrittsti.NTag
 runtime: org.gnome.Platform
 runtime-version: '43'
 sdk: org.gnome.Sdk
+sdk-extensions: 
+  - org.freedesktop.Sdk.Extension.openjdk17
 command: ntag
 finish-args:
   - --socket=x11
@@ -15,6 +17,10 @@ finish-args:
   - --env=JAVA_HOME=/app/jre
   - --env=JAVA=/app/jre/bin/java
 modules:
+  - name: openjdk
+    buildsystem: simple
+    build-commands:
+       - /usr/lib/sdk/openjdk17/install.sh
   - name: ntag
     buildsystem: simple
     build-commands:      
