@@ -1,13 +1,13 @@
 app-id: com.github.nrittsti.NTag
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '47'
 sdk: org.gnome.Sdk
 sdk-extensions: 
-  - org.freedesktop.Sdk.Extension.openjdk17
+  - org.freedesktop.Sdk.Extension.openjdk21
 command: ntag
 finish-args:
   - --socket=x11
-  - --socket=wayland
+  - --share=ipc
   - --filesystem=xdg-music
   - --filesystem=xdg-download
   - --filesystem=/run/media
@@ -20,7 +20,7 @@ modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-       - /usr/lib/sdk/openjdk17/install.sh
+       - /usr/lib/sdk/openjdk21/install.sh
   - name: ntag
     buildsystem: simple
     build-commands:      
@@ -36,5 +36,5 @@ modules:
       - install -Dm644 *.{jar,png,properties} /app/opt/ntag
     sources:
       - type: archive
-        url: https://github.com/nrittsti/ntag/releases/download/v1.2.14/ntag-1.2.14-linux_bin.tar.gz
-        sha256: 07ec27defa7a845319a98f76dddf04cb6a058c99e765b5555ad6bf3a294d546e
+        url: https://github.com/nrittsti/ntag/releases/download/v1.2.15/ntag-1.2.15-linux_bin.tar.gz
+        sha256: c6e06888330790d70783e02b7ea2624eb1a87fb3ac60a548bc89f14a89ad04b5
