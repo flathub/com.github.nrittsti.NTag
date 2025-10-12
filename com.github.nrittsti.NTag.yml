@@ -1,6 +1,6 @@
 app-id: com.github.nrittsti.NTag
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 sdk-extensions: 
   - org.freedesktop.Sdk.Extension.openjdk21
@@ -24,17 +24,17 @@ modules:
   - name: ntag
     buildsystem: simple
     build-commands:      
-      - install -dm755 /app/opt/ntag/lib
+      - install -dm755 /app/opt/ntag/libs
       - sed -i "s|/opt/ntag/ntag.png|com.github.nrittsti.NTag|g" ntag.desktop
       - install -Dm644 ntag.desktop /app/share/applications/com.github.nrittsti.NTag.desktop
       - install -Dm644 com.github.nrittsti.NTag.metainfo.xml /app/share/metainfo/com.github.nrittsti.NTag.metainfo.xml
       - install -Dm644 ntag.png /app/share/icons/hicolor/128x128/apps/com.github.nrittsti.NTag.png
       - sed -i "s|/opt/ntag/jre/bin/java|java|g" ntag.sh
       - sed -i "s|/opt|/app/opt|g" ntag.sh
-      - install -Dm755 ntag.sh /app/bin/ntag      
-      - install -Dm644 lib/*.jar /app/opt/ntag/lib
+      - install -Dm755 ntag.sh /app/bin/ntag
+      - install -Dm644 libs/*.jar /app/opt/ntag/libs
       - install -Dm644 *.{jar,png,properties} /app/opt/ntag
     sources:
       - type: archive
-        url: https://github.com/nrittsti/ntag/releases/download/v1.2.15/ntag-1.2.15-linux_bin.tar.gz
-        sha256: c6e06888330790d70783e02b7ea2624eb1a87fb3ac60a548bc89f14a89ad04b5
+        url: https://github.com/nrittsti/ntag/releases/download/v1.2.16/ntag-1.2.16-linux_bin.tar.gz
+        sha256: 536fad7a097338af2c596d6a8a6da7146fc558bf2ccb0f5b4cf685f81e6c7e3f
